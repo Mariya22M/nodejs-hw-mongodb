@@ -1,6 +1,6 @@
 import { initMongoConnection } from './db/initMongoConnection.js';
 import { setupServer } from './server.js';
-import { logger } from './utils/logger.js'; // Якщо використовуєш pino для логування
+import { logger } from './utils/contacts'; // Якщо використовуєш pino для логування
 
 const bootstrap = async () => {
   try {
