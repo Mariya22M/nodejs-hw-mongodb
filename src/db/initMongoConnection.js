@@ -1,20 +1,27 @@
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 
-import { getEnvVar } from '../utils/getEnvVar.js';
+// Завантаження змінних середовища з .env файлу
+dotenv.config();
 
 export const initMongoConnection = async () => {
   try {
-    const user = getEnvVar('MONGODB_USER');
-    const pwd = getEnvVar('MONGODB_PASSWORD');
-    const url = getEnvVar('MONGODB_URL');
-    const db = getEnvVar('MONGODB_DB');
+    const user = process.env.MONGODB_USER;
+    const pwd = process.env.MONGODB_PASSWORD;
+    const url = process.env.MONGODB_URL;
+    const db = process.env.MONGODB_DB;
+
+    if (!user || !pwd || !url || !db) {
+      throw new Error('Missing MongoDB connection variables');
+    }
 
     await mongoose.connect(
       `mongodb+srv://${user}:${pwd}@${url}/${db}?retryWrites=true&w=majority`,
     );
-    console.log('Mongo connection successfully established!');
+    console.log('MongoDB connection successfully established!');
   } catch (e) {
-    console.log('Error while setting up mongo connection', e);
+    console.log('Error while setting up Mongo connection', e);
     throw e;
   }
 };
+
