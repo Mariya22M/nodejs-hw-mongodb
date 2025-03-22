@@ -15,13 +15,13 @@ export const initMongoConnection = async () => {
       throw new Error('Missing MongoDB connection variables');
     }
 
-    await mongoose.connect(
-      `mongodb+srv://${user}:${pwd}@${url}/${db}?retryWrites=true&w=majority`,
-    );
+    const connectionString = `mongodb+srv://${user}:${pwd}@${url}/${db}?retryWrites=true&w=majority`;
+
+    // Підключення до MongoDB
+    await mongoose.connect(connectionString);
     console.log('MongoDB connection successfully established!');
   } catch (e) {
-    console.log('Error while setting up Mongo connection', e);
+    console.error('Error while setting up Mongo connection', e);
     throw e;
   }
 };
-
