@@ -42,5 +42,3 @@ export const deleteContact = async (contactId) => {
   return contact;
 };
 
-// Додаємо правильний експорт під очікуваною назвою
-export { getAllContacts as getContacts };
