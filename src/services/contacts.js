@@ -1,18 +1,15 @@
 import { ContactsCollection } from '../db/models/contact.js';
 
 export const getAllContacts = async () => {
-  const contacts = await ContactsCollection.find();
-  return contacts;
+  return await ContactsCollection.find();
 };
 
 export const getContactById = async (contactId) => {
-  const contact = await ContactsCollection.findById(contactId);
-  return contact;
+  return await ContactsCollection.findById(contactId);
 };
 
 export const createContact = async (payload) => {
-  const contact = await ContactsCollection.create(payload);
-  return contact;
+  return await ContactsCollection.create(payload);
 };
 
 export const updateContact = async (contactId, payload, options = {}) => {
@@ -35,10 +32,5 @@ export const updateContact = async (contactId, payload, options = {}) => {
 };
 
 export const deleteContact = async (contactId) => {
-  const contact = await ContactsCollection.findOneAndDelete({
-    _id: contactId,
-  });
-
-  return contact;
+  return await ContactsCollection.findOneAndDelete({ _id: contactId });
 };
-
