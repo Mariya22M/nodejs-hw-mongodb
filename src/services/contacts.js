@@ -11,8 +11,8 @@ export const getContactById = async (contactId) => {
 };
 
 export const createContact = async (payload) => {
-  const student = await ContactsCollection.create(payload);
-  return student;
+  const contact = await ContactsCollection.create(payload);
+  return contact;
 };
 
 export const updateContact = async (contactId, payload, options = {}) => {
@@ -41,3 +41,6 @@ export const deleteContact = async (contactId) => {
 
   return contact;
 };
+
+// Додаємо правильний експорт під очікуваною назвою
+export { getAllContacts as getContacts };
