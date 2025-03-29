@@ -4,7 +4,7 @@ export const calculatePaginationData = (contacts, count, perPage, page) => {
   const hasPreviousPage = page !== 1;
 
   return {
-    data: contacts, // Масив контактів для поточної сторінки
+    data: contacts,
     page,
     perPage,
     totalItems: count,
