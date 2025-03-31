@@ -2,6 +2,7 @@ import Joi from 'joi';
 import { isValidObjectId } from 'mongoose';
 
 export const createContactSchema = Joi.object({
+  photo: Joi.string(),
   name: Joi.string().trim().min(3).max(20).required().messages({
     'string.base': 'Name should be a string.',
     'string.empty': 'Name cannot be empty.',
@@ -43,6 +44,7 @@ export const createContactSchema = Joi.object({
 });
 
 export const updateContactSchema = Joi.object({
+    photo: Joi.string(),
   name: Joi.string().trim().min(3).max(20).messages({
     'string.base': 'Name should be a string.',
     'string.min': 'Name should have at least {#limit} characters.',
