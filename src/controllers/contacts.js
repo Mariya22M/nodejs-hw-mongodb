@@ -20,12 +20,12 @@ export const getContactsController = async (req, res) => {
 
   const contacts = await getAllContacts({
     page,
-    perPage,
-    sortBy,
-    sortOrder,
+    perPage,  
+    sortBy,  
+    sortOrder,   
     filter,
-    userId: req.user._id,
-  });
+    userId: req.user._id,               
+  });   
 
   if (contacts.data.length === 0) {
     return res.status(404).json({
