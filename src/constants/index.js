@@ -19,9 +19,9 @@ export const SMTP = {
 export const TEMPLATES_DIR = path.join(process.cwd(), 'src', 'templates');
 
 export const CLOUDINARY = {
-  CLOUD_NAME: 'dd26l4a2r',
-  API_KEY: '253329749396598',
-  API_SECRET: "ov8c4y2cOZK7bCtX6knYaBkcKIU",
+  CLOUD_NAME: 'CLOUD_NAME',
+  API_KEY: 'API_KEY',
+  API_SECRET: 'API_SECRET',
 };
 
 export const TEMP_UPLOAD_DIR = path.join(process.cwd(), 'temp');
