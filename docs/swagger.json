@@ -177,8 +177,10 @@
             "$ref": "#/components/responses/500"
           }
         }
-      },
-      "delete": {
+      }
+    },
+    "/auth/logout": {
+      "post": {
         "tags": [
           "Auth"
         ],
@@ -201,8 +203,10 @@
             "$ref": "#/components/responses/500"
           }
         }
-      },
-      "patch": {
+      }
+    },
+    "/auth/refresh": {
+      "post": {
         "tags": [
           "Auth"
         ],
@@ -251,8 +255,10 @@
             "$ref": "#/components/responses/500"
           }
         }
-      },
-      "put": {
+      }
+    },
+    "/auth/reset-pwd": {
+      "post": {
         "tags": [
           "Auth"
         ],
@@ -495,9 +501,9 @@
                     "example": "John Doe"
                   },
                   "phoneNumber": {
-                    "description": "Contact's phone number in international format (e.g. +4800000000000) 13 digits with country code",
+                    "description": "Contact's phone number in international format (e.g. +381234567890)",
                     "type": "string",
-                    "example": "+4800000000000"
+                    "example": "+381234567890"
                   },
                   "email": {
                     "description": "Contact's email",
@@ -830,9 +836,9 @@
             "example": "John Doe"
           },
           "phoneNumber": {
-            "description": "Contact's phone number",
+            "description": "Contact's phone number. 13 digits max including country cod forexample +4800000000000",
             "type": "string",
-            "example": "+381234567890"
+            "example": "+4800000000000"
           },
           "email": {
             "description": "Contact's email address",

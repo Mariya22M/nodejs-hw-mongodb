@@ -17,16 +17,20 @@ servers:
 paths:
   /auth/register:
     post:
-      $ref: ../swagger/paths/auth/register/register.yaml
+      $ref: ../swagger/paths/auth/register.yaml
 
-  /auth:
+  /auth/login:
     post:
       $ref: ../swagger/paths/auth/login.yaml
-    delete:
+
+  /auth/logout:
+    post:
       $ref: ../swagger/paths/auth/logout.yaml
-    patch:
+  /auth/refresh:
+    post:
       $ref: ../swagger/paths/auth/refresh_session.yaml
-    put:
+  /auth/reset-pwd:
+    post:
       $ref: ../swagger/paths/auth/reset_password.yaml
 
   /contacts:

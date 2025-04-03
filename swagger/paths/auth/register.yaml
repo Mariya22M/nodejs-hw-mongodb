@@ -14,6 +14,7 @@ requestBody:
         required:
           - email
           - password
+          - name
         properties:
           email:
             type: string
@@ -21,6 +22,9 @@ requestBody:
           password:
             type: string
             example: 'SecureP@ss123'
+          name:
+            type: string
+            example: 'test-user'
 responses:
   '201':
     description: Successfully registered a user!
@@ -38,6 +42,6 @@ responses:
             data:
               type: object
   '404':
-    $ref: '../../../components/responses/404.yaml'
+    $ref: '../../components/responses/404.yaml'
   '500':
-    $ref: '../../../components/responses/500.yaml'
+    $ref: '../../components/responses/500.yaml'

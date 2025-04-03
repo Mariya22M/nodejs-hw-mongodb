@@ -15,9 +15,9 @@ properties:
     type: string
     example: 'John Doe'
   phoneNumber:
-    description: "Contact's phone number"
+    description: "Contact's phone number. 13 digits max including country cod forexample +4800000000000"
     type: string
-    example: '+381234567890'
+    example: '+4800000000000'
   email:
     description: "Contact's email address"
     type: string
