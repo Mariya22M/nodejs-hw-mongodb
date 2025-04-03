@@ -501,9 +501,9 @@
                     "example": "John Doe"
                   },
                   "phoneNumber": {
-                    "description": "Contact's phone number in international format (e.g. +381234567890)",
+                    "description": "Contact's phone number in international format (e.g. +4800000000000) 13 digitsmax withphonenumber",
                     "type": "string",
-                    "example": "+381234567890"
+                    "example": "+4800000000000"
                   },
                   "email": {
                     "description": "Contact's email",
