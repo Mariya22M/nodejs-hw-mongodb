@@ -12,7 +12,7 @@ tags:
   - name: Auth
     description: Auth operations.
 servers:
-  - url: http://localhost:3000/confirm-gooqle-auth
+  - url: http://localhost:3000
   - url: https://contacts-app-u42y.onrender.com
 paths:
   /auth/register:
