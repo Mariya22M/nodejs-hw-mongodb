@@ -98,7 +98,7 @@
         }
       }
     },
-    "/auth": {
+    "/auth/login": {
       "post": {
         "tags": [
           "Auth"
