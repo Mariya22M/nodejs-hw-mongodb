@@ -7,12 +7,6 @@ import { SWAGGER_PATH } from '../constants/index.js';
 export const swaggerDocs = (req, res) => {
   try {
     const swaggerDoc = JSON.parse(fs.readFileSync(SWAGGER_PATH).toString());
-      swaggerDoc.servers = [
-          {
-              url: `${req.protocol}://${req.get('host')}`,
-              description: 'Current server',
-          },
-      ];
     return [...swaggerUI.serve, swaggerUI.setup(swaggerDoc)];
   } catch (error) {
     return (req, res, next) =>
