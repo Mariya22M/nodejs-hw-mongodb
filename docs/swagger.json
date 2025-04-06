@@ -10,8 +10,8 @@
     "description": "This is a documentation of contacts app"
   },
   "servers": [
-    {
-      "url": "/"
+  {
+      "url": "https://contacts-app-u42y.onrender.com"
     }
   ],
   "tags": [
